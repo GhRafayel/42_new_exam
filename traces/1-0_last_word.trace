@@ -1,0 +1,9 @@
+----------------8<-------------[ START TEST 
+        💻 TEST
+./a.out "padinton" "paqefwtdjetyiytjneytjoeyjnejeyj" 
+        🔎 YOUR OUTPUT:
+cc1: fatal error: ../../rendu/last_word/last_word.c: No such file or directory
+compilation terminated.
+
+        ❌ COMPILATION ERROR
+----------------8<------------- END TEST ]
