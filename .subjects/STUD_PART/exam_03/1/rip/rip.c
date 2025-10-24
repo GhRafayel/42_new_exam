@@ -153,15 +153,14 @@ int main(int argc, char **argv)
      * - Generar todas las soluciones con ese mínimo
      */
     
-    if (argc != 2 || argv[1][0] == '\0')
-        return 1;
+    if (argc != 2 || argv[1][0] == '\0') return (printf("Error:\n"), 1);
     
     // Validar que el string solo contiene paréntesis
     int i = 0;
     while (argv[1][i])
     {
         if (argv[1][i] != '(' && argv[1][i] != ')')
-            return 1;
+            return (printf("Error:\n"), 1);
         i++;
     }
     

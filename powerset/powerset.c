@@ -142,19 +142,17 @@ int main(int argc, char **argv)
     // Caso especial: target = 0, imprimir línea vacía y salir
     if (argc == 1 || (argc >= 2 && argv[1][0] == '0' && argv[1][1] == '\0'))
     {
-        printf("\n");
+        printf("Error:\n");
         return 0;
     }
 
     // Validar argumentos
-    if (!check_args(argc, argv))
-        return 1;
+    if (!check_args(argc, argv)) return (printf("Error:\n"), 1);
 
     int target = atoi(argv[1]);
     int set_size = argc - 2;  // Excluir programa y target
     
-    if (set_size <= 0)
-        return 1;
+    if (set_size <= 0)  return (printf("Error:\n"), 1);
 
     // Alocar arrays para el conjunto y el subset actual
     int *set = malloc(set_size * sizeof(int));
@@ -164,7 +162,7 @@ int main(int argc, char **argv)
     {
         free(set);
         free(subset);
-        return 1;
+        return (printf("Error:\n"), 1);
     }
 
     // Llenar el array con los números del comando
@@ -183,8 +181,7 @@ int main(int argc, char **argv)
     backtrack(set, subset, set_size, 0, 0, 0, target, &found);
     
     // Si no se encontró ninguna solución, imprimir línea vacía
-    if (!found)
-        printf("\n");
+    if (!found) printf("Error:\n");
 
     free(set);
     free(subset);

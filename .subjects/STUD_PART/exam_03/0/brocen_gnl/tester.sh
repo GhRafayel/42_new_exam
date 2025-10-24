@@ -4,7 +4,6 @@ ASSIGN='brocen_gnl'
 
 
 # Test 1 - test1.txt
-echo "Test 2: test1.txt"
 bash .system/auto_correc_main.sh $FILE $ASSIGN "test1.txt"
 if [ -e .system/grading/traceback ]; then
     mv .system/grading/traceback .

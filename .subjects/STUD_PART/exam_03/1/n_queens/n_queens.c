@@ -96,3 +96,23 @@ void solve_n_queens(int *board, int n)
         return;
     backtrack(board, 0, n);
 }
+
+
+int main(int argc, char **argv)
+{
+    int n;
+    int *board;
+
+    if (argc != 2) return (printf("Error:\n"), 1);
+
+    n = atoi(argv[1]);
+    if (n <= 0) return (printf("Error:\n"), 1);
+
+    board = (int *)calloc((size_t)n, sizeof(int));
+    if (!board) return (printf("Error:\n"), 1);
+
+    solve_n_queens(board, n);
+
+    free(board);
+    return 0;
+}

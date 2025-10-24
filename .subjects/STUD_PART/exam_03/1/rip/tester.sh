@@ -78,4 +78,4 @@ if [ -e .system/grading/traceback ];then
     exit 1
 fi
 
-echo "All rip tests passed successfully!"
+touch .system/grading/passed

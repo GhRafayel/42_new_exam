@@ -25,7 +25,6 @@ int main(int argc, char **argv)
 		free(line); // Podemos liberar directamente despues de generarla, aunque no se entrega main
 		count++;
 	}
-
     close(fd);
     return 0;
 }

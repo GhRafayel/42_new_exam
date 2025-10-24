@@ -1,31 +1,30 @@
-#include "n_queens.h"
+#include "get_next_line.h"
 
 int main(int argc, char **argv)
 {
-    int n;
-    int *board;
-
     if (argc != 2)
     {
-        fprintf(stderr, "Usage: %s n\n", (argc > 0 ? argv[0] : "n_queens"));
+        printf("Uso: %s <arquivo_para_ler>\n", argv[0]);
         return 1;
     }
 
-    n = atoi(argv[1]);
-    if (n <= 0)
+	// Abrimos argv[1]
+    int fd = open(argv[1], O_RDONLY);
+    if (fd < 0) // Cubrimos que sea negativo
     {
-        return 0;
-    }
-
-    board = (int *)calloc((size_t)n, sizeof(int));
-    if (!board)
-    {
-        fprintf(stderr, "Allocation error\n");
+        perror("Error: no se puede abrir el archivo");
         return 1;
     }
 
-    solve_n_queens(board, n);
+    char *line;
+    int count = 0;
 
-    free(board);
+    while ((line = get_next_line(fd)) != NULL)
+    {
+        printf("Linea %d: %s", count + 1, line);
+		free(line); // Podemos liberar directamente despues de generarla, aunque no se entrega main
+		count++;
+	}
+    close(fd);
     return 0;
 }

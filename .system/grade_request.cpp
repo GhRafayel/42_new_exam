@@ -147,16 +147,16 @@ void exam::grademe(void)
         sigd();
     if (input == "y" || input == "Y")
     {
-        if (current_ex->time_bef_grade > time(NULL) && waiting_time)
-        {
-            std::cout << RED << "ERROR: " << RESET << "You must wait at least " << YELLOW << BOLD;
-            if ((((current_ex->time_bef_grade - time(NULL))) / 60) >= 1)
-                std::cout << (current_ex->time_bef_grade - time(NULL)) / 60 << " minutes" << RESET << " and " << YELLOW << BOLD << (current_ex->time_bef_grade - time(NULL)) % 60 << " seconds" << RESET;
-            else
-                std::cout << (current_ex->time_bef_grade - time(NULL)) << " seconds" << RESET;
-            std::cout << " until next grading request, so take your time to make more tests and be sure you will succeed next try!" << std::endl;
-            return;
-        }
+        // if (current_ex->time_bef_grade > time(NULL) && waiting_time)
+        // {
+        //     std::cout << RED << "ERROR: " << RESET << "You must wait at least " << YELLOW << BOLD;
+        //     if ((((current_ex->time_bef_grade - time(NULL))) / 60) >= 1)
+        //         std::cout << (current_ex->time_bef_grade - time(NULL)) / 60 << " minutes" << RESET << " and " << YELLOW << BOLD << (current_ex->time_bef_grade - time(NULL)) % 60 << " seconds" << RESET;
+        //     else
+        //         std::cout << (current_ex->time_bef_grade - time(NULL)) << " seconds" << RESET;
+        //     std::cout << " until next grading request, so take your time to make more tests and be sure you will succeed next try!" << std::endl;
+        //     return;
+        // }
         std::cout << "Ok, making grading request to server now." << std::endl;
         grade_request(0);
     }

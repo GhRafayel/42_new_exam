@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FILE='ft_scanf.c'
-ASSIGN='scanf'
+ASSIGN='ft_scanf'
 
 bash .system/auto_correc_main.sh $FILE $ASSIGN "A" "%c"
 if [ -e .system/grading/traceback ];then
