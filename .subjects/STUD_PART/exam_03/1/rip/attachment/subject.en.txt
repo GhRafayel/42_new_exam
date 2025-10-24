@@ -1,5 +1,5 @@
 Assignment name  : rip
-Expected files   : *.c *.h
+Expected files   : rip.c rip.h
 Allowed functions: puts, write
 --------------------------------------------------------------------------------
 

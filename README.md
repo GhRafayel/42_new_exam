@@ -46,10 +46,6 @@
    
    **new_ex** : generate a new exercice on the same level
    
- # 🕶 VIP CHEAT code :
- [Sponsor to become VIP](https://github.com/sponsors/JCluzet)
- OR
- [Contribute to become VIP](CONTRIBUTING.md)
  
  You can contribute by adding new exercises or improving the program 
  
@@ -62,15 +58,6 @@
   > More features coming
 
  # Launch 42_EXAM in ONE COMMAND : 
-
- ```bash -c "$(curl https://grademe.fr)"```    --> Visit [Grademe.fr](https://grademe.fr)
- 
-# 👮‍♀️ RGPD Information :
- Some data may be collected for the sole purpose of improving the service, for example to check if an error is coming from the student and not from the program. 
-The data that can be collected are : 
-- The host name of your machine.
-- The exam number you choose.
-- Name of exercise, fail or success, current assignement and level.
 
 # Contribution by adding more exercises :
 

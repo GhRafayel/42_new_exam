@@ -66,7 +66,7 @@ int main(void)
     /* Read up to 11 cities from stdin, format "%f, %f" per line */
     while (n < 11 && fscanf(stdin, "%f, %f", &cities[n].x, &cities[n].y) == 2)
         n++;
-
+   
     if (n < 2) return (printf("%s", "Error:\n"), 1);
 
     /* initialize path indices: 0,1,2,...,n-1 */
