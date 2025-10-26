@@ -57,7 +57,7 @@ void exam::set_max_lvl(void)
         else if (exam_number == 4)
             level_max = 1;
         else if (exam_number == 5)
-            level_max = 3;
+            level_max = 2;
         else if (exam_number == 6)
             level_max = 1;
     }

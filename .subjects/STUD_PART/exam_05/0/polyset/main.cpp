@@ -3,7 +3,7 @@
 #include "searchable_array_bag.hpp"
 #include "set.hpp"
 
-
+#include <cstdlib>
 #include <iostream>
 
 int main(int argc, char **argv)
@@ -19,7 +19,6 @@ int main(int argc, char **argv)
 	}
 	t->print();
 	a->print();
-
 	for (int i = 1; i < argc; i++)
 	{
 		std::cout << t->has(atoi(argv[i])) << std::endl;
@@ -47,7 +46,8 @@ int main(int argc, char **argv)
 		sa.get_bag().print();
 		st.print();
 		sa.clear();
-		sa.insert((int[]){ 1, 2, 3, 4, }, 4);
+		int array[4] = {1, 2, 3, 4};
+		sa.insert(array, 4);
 		std::cout << std::endl;
 	}
 

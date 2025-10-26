@@ -1,15 +1,9 @@
 #include "searchable_tree_bag.hpp"
 
 
-searchable_tree_bag::searchable_tree_bag()
-{
+searchable_tree_bag::searchable_tree_bag() {}
 
-}
-
-searchable_tree_bag::searchable_tree_bag(const searchable_tree_bag& source) : tree_bag(source)
-{
-
-}
+searchable_tree_bag::searchable_tree_bag(const searchable_tree_bag& source) : tree_bag(source) {}
 
 searchable_tree_bag& searchable_tree_bag::operator=(const searchable_tree_bag& source)
 {

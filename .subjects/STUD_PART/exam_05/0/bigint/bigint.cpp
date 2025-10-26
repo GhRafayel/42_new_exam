@@ -1,10 +1,7 @@
 
 #include "bigint.hpp"
 
-bigint::bigint()
-{
-	this->str = "0";
-}
+bigint::bigint(){ this->str = "0"; }
 
 bigint::bigint(unsigned int num)
 {
@@ -14,10 +11,7 @@ bigint::bigint(unsigned int num)
 	// std::cout << "str: " << str << std::endl;
 }
 
-bigint::bigint(const bigint& source)
-{
-	(*this) = source;
-}
+bigint::bigint(const bigint& source) { (*this) = source; }
 
 bigint& bigint::operator=(const bigint& source)
 {
@@ -27,18 +21,13 @@ bigint& bigint::operator=(const bigint& source)
 	return(*this);
 }
 
-std::string bigint::getStr() const
-{
-	return(this->str);
-}
+std::string bigint::getStr() const { return(this->str); }
 
 std::string reverse(const std::string& str)
 {
 	std::string revStr;
 	for(size_t i = str.length(); i > 0; i--)
-	{
 		revStr.push_back(str[i - 1]);
-	}
 	return(revStr);
 }
 
@@ -124,7 +113,6 @@ bigint bigint::operator++(int)
 	return(temp);
 }
 
-
 bigint bigint::operator<<(unsigned int n)const
 {
 	bigint temp = *this;
@@ -192,7 +180,6 @@ bigint& bigint::operator>>=(const bigint& other)
 	(*this) = (*this) >> stringToUINT(other.str);
 	return(*this);
 }
-
 
 bool bigint::operator==(const bigint& other) const
 {
