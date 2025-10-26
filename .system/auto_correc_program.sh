@@ -26,7 +26,7 @@ gcc -o source "$1"
 ./source "${@:3}" | cat -e > sourcexam       #TESTING
 rm -f source
 {
-gcc -o final "$FILE"
+gcc -Wall -Wextra -Werror  -o final "$FILE"
 }  2>.dev
 {
 ./final "${@:3}" | cat -e > finalexam &       #TESTING

@@ -42,7 +42,6 @@ void bad_function_abort(void)
 }
  
 
-
 int main()
 {
     int result;

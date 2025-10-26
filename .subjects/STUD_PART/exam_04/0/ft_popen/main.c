@@ -254,10 +254,10 @@ void run_comprehensive_valgrind_test() {
     }
 }
 
-int main() {
+int main() 
+{
     printf("🧪 Comprehensive ft_popen Testing (Memory & FD Management)\n");
     printf("=========================================================\n");
-    
     test_fd_leaks();
     test_child_process_cleanup();
     test_pipe_closure_on_errors();
