@@ -90,7 +90,6 @@ bigint bigint::operator+(const bigint& other)const
 	std::string result = addition(*this, other);
 	temp.str = result;
 	//std::cout << "r: " << result << std::endl;
-
 	return(temp);
 }
 

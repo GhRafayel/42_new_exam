@@ -10,6 +10,7 @@ class vect2
 		int x;
 		int y;
 	public:
+		~vect2();
 		vect2();
 		vect2(int num1, int num2);
 		vect2(const vect2& source);
@@ -38,8 +39,7 @@ class vect2
 
 		bool operator==(const vect2& obj) const;
 		bool operator!=(const vect2& obj) const;
-
-		~vect2();
+		
 };
 
 vect2 operator*(int num, const vect2& obj);
